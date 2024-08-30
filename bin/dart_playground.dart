@@ -70,14 +70,79 @@ main() {
   print('Flutter & Dart'.toUpperCase().replaceFirst('DART', 'D.A.R.T'));
   print(10.6766554333.toStringAsFixed(2));
 
+  /*
+  Uma Lista é uma estrutura de dados que é prativamente um Array, uma coleção de variáveis 
+  que compartilha o mesmo nome e seus conteúdos são individualizados pelo índice de cada variável,
+  ou seja o índice é que as diferenciam, são também conhecidas como variáveis indexadas unidimensionais.
+  */
+
   //TODO: Listas, Maps e Sets
 
   // Declaração de lista tipada
-  var numeros = <double>[4, 6, 7, 8, 9, 12, 56];
+  List<int> listaNumeros1 = [4, 6, 7, 8, 9, 12, 56];
+  var listaNumeros2 = <double>[4, 6, 7, 8, 9, 12, 56];
+
+  var listaNumeros3 = [4, 6, 7, 8, 9, 12, 56];
+
+  print(
+      'listNumeros[1]: ${listaNumeros1[1]} - listNumeros[2]: ${listaNumeros2[2]}');
+  print('\nlistaNumeros1');
+  print(listaNumeros1);
+  print('\nlistaNumeros2');
+  print(listaNumeros2);
+  print('\nlistaNumeros3');
+  print(listaNumeros3);
+
+  // Maps
+  var estados = {'SP': "São Paulo", 'RJ': 'Rio de Janeiro', 'CE': 'Ceará'};
+  print(estados['CE']);
+
+  Map<String, dynamic> json = {
+    'id': 189,
+    'name': 'Aline Alves',
+    'email': {
+      'pessoal': 'aline@gmail.com',
+      'corporativo': 'aline@cps.sp.gov.br'
+    }
+  };
+  print(json);
+
+  // Sets
+  var filmes = <String>{
+    'Episodio I - A ameaça fantasma',
+    'Episodio II - O ataque dos clones',
+    'Episodio III - A vingança dos Sith'
+  };
+  print(filmes);
+  filmes.add('Episodio II - O ataque dos clones');
+  print(filmes);
 
   //TODO: Loops
+  print('\nLoops FOR');
+  for (int i = 0; i < listaNumeros1.length; i++) {
+    print('listaNumeros1[$i]: ${listaNumeros1[i]}');
+  }
 
-  //TODO: Iterables
+  print('\nLoops FOR IN');
+  for (final n in listaNumeros2) {
+    print(n);
+  }
+
+  print('\nLoops FOREACH');
+  listaNumeros3.forEach(print);
+
+  for (var element in listaNumeros3) {
+    print('element: $element');
+  }
+
+  print('\nEsados');
+  estados.forEach((key, value) {
+    print(('sigla: $key - estado: $value'));
+  });
+
+  //Cast
+
+  // Nullables
 
   //TODO: Funções
 
