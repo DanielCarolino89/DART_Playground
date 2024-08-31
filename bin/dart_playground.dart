@@ -135,7 +135,7 @@ main() {
     print('element: $element');
   }
 
-  print('\nEsados');
+  print('\nEstados');
   estados.forEach((key, value) {
     print(('sigla: $key - estado: $value'));
   });
@@ -143,6 +143,16 @@ main() {
   //Cast
 
   // Nullables
+  double? age = 10;
+  double? myNull;
+  age = myNull ?? 9;
+  print(age.toStringAsPrecision(2));
+
+  List<int?>? lista = [3, 56, 78, 32, null, 5];
+
+  for (int? value in lista) {
+    print(value ??= 1000);
+  }
 
   //TODO: Funções
 
