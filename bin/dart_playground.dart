@@ -1,3 +1,5 @@
+import 'dart:math';
+
 /// Função gatilho da aplicação, ou seja é o entry-point do projeto.
 main() {
   //TODO: Comentários
@@ -151,15 +153,16 @@ main() {
   List<int?>? lista = [3, 56, 78, 32, null, 5];
 
   for (int? value in lista) {
-    print(value ??= 1000);
+    print(value?.isOdd);
   }
 
   //TODO: Funções
-  exibirNumeroDaSorte('Valdelaine', limite: 200);
+  exibirNumeroDaSorte(nome: 'Carlão', limite: 5);
 
   //TODO: Desafio!!!!!!
 }
 
-void exibirNumeroDaSorte(String nome, {int limite = 100}) {
-  print('$nome, seu numero da sorte é ${Random().nextInt(limite) + 1}');
+void exibirNumeroDaSorte({String? nome, int? limite = 100}) {
+  print(
+      '${nome ??= 'Anonimo'}, seu numero da sorte é ${Random().nextInt(limite!) + 1}');
 }
