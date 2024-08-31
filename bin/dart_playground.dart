@@ -155,6 +155,11 @@ main() {
   }
 
   //TODO: Funções
+  exibirNumeroDaSorte('Valdelaine', limite: 200);
 
   //TODO: Desafio!!!!!!
+}
+
+void exibirNumeroDaSorte(String nome, {int limite = 100}) {
+  print('$nome, seu numero da sorte é ${Random().nextInt(limite) + 1}');
 }
