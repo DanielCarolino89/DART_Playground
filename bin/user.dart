@@ -25,6 +25,13 @@ class User {
   }) {
     _admin = true;
   }
+
+  User.moderator(this.id, bool admin) : _admin = admin;
+
+  @override
+  String toString() {
+    return 'User(id: $id, userName: $userName, password: $password, _admin: $_admin)';
+  }
 }
 
 main() {
